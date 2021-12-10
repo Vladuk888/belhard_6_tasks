@@ -7,3 +7,9 @@
 "Выполняем {func.__name__} с args: {args} и kwargs: {kwargs}".
 После выполнения функции напечатать строку "Выполнено {func.__name__}"
 """
+
+def hello(name: str):
+    print(f"Привет,", {name})
+
+if __name__ == '__main__':
+    input('Введите name: ')
