@@ -5,3 +5,11 @@ False, если нет
 
 Нельзя пользоваться операцией возведения в степень
 """
+
+
+def check_number(number):
+    if (number & (number - 1)) == 0 and number != 0:
+        return True
+        return check_number(number)
+    else:
+        return False
