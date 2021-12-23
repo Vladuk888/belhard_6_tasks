@@ -2,13 +2,18 @@
 Напишите функцию yes_or_no, которая принимает список из целых чисел,
 проходит по нему и выводит Yes, если число уже встречалось и No, если нет
 """
+some_list = [1, 2, 3, 1, 5, 2, 1, 7]
 
 
-def yes_or_no(numbers: list):
-    new_list = [numbers]
-    for i in range(0, len(numbers)):
-        if numbers[i] in new_list:
-            print(f"{numbers[i]} - Yes")
+def yes_or_no(some):
+    met = set()
+    for i in some:
+        if i in met:
+            print("Yes")
         else:
-            new_list.append(numbers[i])
-            print(f"{numbers[i]} - No")
+            print("No")
+            met.add(i)
+
+
+if __name__ == '__main__':
+    yes_or_no(some_list)
